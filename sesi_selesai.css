@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    background: #FFF9ED;
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.selesai-container {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF9ED;
+}
+
+.selesai-card {
+    background: #FFFAEC;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.selesai-card h2 {
+    margin-bottom: 1.2rem;
+    color: #2D2A2A;
+    font-weight: 700;
+}
+
+.selesai-card p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.btn-kembali {
+    display: inline-block;
+    background: #FFB703;
+    color: #2D2A2A;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-kembali:hover {
+    background: #ffa600;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Sesi Yoga</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main_dashboard.css">
+    <link rel="stylesheet" href="main_jadwal.css">
+    <link rel="stylesheet" href="main_riwayat.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">YoFi</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><i class="fas fa-home"></i> <a href="main_dashboard.html">Beranda</a></li>
+                    <li><i class="fas fa-calendar-alt"></i> <a href="main_jadwal.html">Jadwal</a></li>
+                    <li class="active"><i class="fas fa-history"></i> <a href="main_riwayat.html">Riwayat</a></li>
+                    <li><i class="fas fa-heartbeat"></i> <a href="form_kesehatan.html">Form Kesehatan</a></li>
+                    <li><i class="fas fa-bell"></i> <a href="main_pengingat.html">Pengingat</a></li>
+                    <li><i class="fas fa-camera"></i> <a href="main_galeri_pose.html">Galeri Pose</a></li>
+                    <li><i class="fas fa-question-circle"></i> <a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h2>Riwayat</h2>
+                <div class="header-actions">
+                    <button class="btn-primary-action" id="btnJadwalBaru">
+                        <i class="fas fa-plus"></i> Jadwal Baru
+                    </button>
+                    <i class="fas fa-bell header-icon"></i>
+                    <div class="profile-dropdown-container">
+                        <i class="fas fa-user-circle header-icon profile-icon" id="profileDropdownBtn"></i>
+                        <div class="dropdown-menu" id="profileDropdown">
+                            <a href="#">Profil Saya</a>
+                            <a href="#">Pengaturan</a>
+                            <hr>
+                            <a href="/static/landingpage.html" id="profileDropdownLogout">Keluar</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="schedule-list-section card">
+                <h3>Daftar Riwayat Sesi Anda</h3>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Nama Sesi</th>
+                                <th>Durasi</th>
+                                <th>Jumlah Pose</th>
+                            </tr>
+                        </thead>
+                        <tbody id="riwayatTableBody">
+                            <tr><td colspan="4" style="text-align:center;">Memuat data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+    <script src="main_riwayat.js"></script>
+</body>
+</html>

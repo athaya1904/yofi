@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoFi - Preview Pose</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="preview_pose.css"> 
+</head>
+<body class="session-focus-page"> 
+
+    <div class="session-header">
+        <h1 id="sessionPageTitle">Preview Pose</h1> 
+        <a href="main_dashboard.html" class="end-session-button" id="endSessionPreviewBtn" title="Akhiri Sesi & Kembali ke Beranda">
+            <i class="fas fa-times"></i> Akhiri Sesi
+        </a>
+    </div>
+
+    <div class="session-content-container preview-content"> 
+        <div class="pose-info-box">
+            <h2 id="poseNamePreview" class="pose-title">Memuat Nama Pose...</h2>
+            <p class="countdown-text">Pose akan dimulai dalam <span id="countdownPreviewTimer" class="timer-emphasis">15</span> detik...</p>
+        </div>
+
+        <div class="pose-video-container">
+            <video id="poseVideoElement" width="100%" height="auto" muted playsinline autoplay loop>
+                <source src="videos/poses/placeholder_pose.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+        </div>
+
+    <script src="preview_pose.js"></script>
+</body>
+</html>

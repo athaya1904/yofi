@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: #FFFAEC;
+    color: #1b2b20;
+    line-height: 1.6;
+    display: flex; 
+}
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    padding: 8.4rem 2rem;
+    background-color: #1b2b20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-nav ul {
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav li i {
+    width: 20px;
+    margin-right: 15px; 
+    color: #f2eeda;
+    transition: color 0.3s ease;
+}
+
+.sidebar-nav li:hover {
+    background-color: #f2eeda;
+}
+
+.sidebar-nav li:hover i,
+.sidebar-nav li:hover a {
+    color: #1b2b20; /* Warna hijau tua untuk ikon dan teks */
+}
+
+.sidebar-nav li.active {
+    background-color: #f2eeda;
+    font-weight: 500;
+}
+
+.sidebar-nav li.active i,
+.sidebar-nav li.active a {
+    color: #1b2b20;
+}
+
+.sidebar-nav li i,
+.sidebar-nav li a {
+    color: #f2eeda;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.riwayat-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.riwayat-card {
+    background: #FFFAEC;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.riwayat-card h2 {
+    margin-bottom: 1.5rem;
+    color: #2D2A2A;
+    font-weight: 700;
+}
+
+.riwayat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.riwayat-table th, .riwayat-table td {
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #f0e6c8;
+    text-align: center;
+}
+
+.riwayat-table th {
+    background: #FFB703;
+    color: #2D2A2A;
+    font-weight: 600;
+}
+
+.riwayat-table tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-kembali {
+    display: inline-block;
+    background: #FFB703;
+    color: #2D2A2A;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-kembali:hover {
+    background: #ffa600;
+}

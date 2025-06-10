@@ -1,0 +1,139 @@
+html, body.session-focus-page {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: #1b2b20;
+    box-sizing: border-box; 
+}
+
+body.session-focus-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    min-height: 100vh;
+    padding: 50px;
+    background-color: #b2c05f;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; 
+}
+
+/* === HEADER SESI (Umum untuk halaman persiapan, preview, webcam, selesai) === */
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; 
+    margin-bottom: 25px; 
+    padding-bottom: 15px;
+    border-bottom: 0.5px solid#f2eeda;
+}
+
+.session-header h1 { 
+    font-size: 1.6rem; 
+    color: #333;
+    font-weight: 600;
+    margin: 0; 
+}
+
+.btn-quit-session { 
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #16261e; 
+    color:  #f2eeda;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-quit-session i {
+   margin-right: 5px;
+    font-size: 0.75rem;
+}
+.btn-quit-session:hover {
+    background-color: #e82908;
+    color: #f2eeda;
+}
+
+.session-content-container { 
+    width: 100%;
+    max-width: 720px; 
+    padding: 25px 30px;   
+    background-color: #f2eeda;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.btn-primary-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.7rem 1.2rem;
+    background-color: #1b2b20;
+    color: #f2eeda;
+    border: none;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+.btn-primary-action:hover {
+    background-color:  #b2c05f;
+    color: #1b2b20;
+}
+
+
+/* --- Halaman Persiapan Sesi (persiapan_sesi.html) --- */
+.preparation-card { 
+    padding-top: 2rem; 
+    padding-bottom: 2.5rem; 
+}
+.preparation-card h3 { 
+    margin-bottom: 1rem;
+    font-size: 1.7rem; 
+    color: #1b2b20;
+    font-weight: 600;
+}
+.preparation-card .sub-instruction { 
+    margin-bottom: 2.5rem; 
+    font-size: 1.05rem; 
+    color: #1b2b20;
+    line-height: 1.6;
+}
+.preparation-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem; 
+    text-align: left; 
+    display: inline-block; 
+}
+.preparation-list li {
+    font-size: 1.1rem; 
+    margin-bottom: 1rem; 
+    display: flex;
+    align-items: center;
+    color: #1b2b20;
+}
+.preparation-list i { 
+    color: #16261e;   
+    margin-right: 12px;
+    font-size: 1.4rem; 
+}
+
+#btnSayaSiap.btn-large { 
+    padding: 0.9rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+

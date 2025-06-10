@@ -1,0 +1,427 @@
+/* main_jadwal.css */
+
+/* General Styles (Bisa juga diletakkan di file CSS global jika ada) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: #FFFAEC;
+    color: #333;
+    line-height: 1.6;
+    display: flex; 
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    padding: 10rem 2rem;
+    background-color: #1b2b20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-nav ul {
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav li i {
+    width: 20px;
+    margin-right: 15px; 
+    color: #f2eeda;
+    transition: color 0.3s ease;
+}
+
+.sidebar-nav li:hover {
+    background-color: #f2eeda;
+}
+
+.sidebar-nav li:hover i,
+.sidebar-nav li:hover a {
+    color: #1b2b20; /* Warna hijau tua untuk ikon dan teks */
+}
+
+.sidebar-nav li.active {
+    background-color: #f2eeda;
+    font-weight: 500;
+}
+
+.sidebar-nav li.active i,
+.sidebar-nav li.active a {
+    color: #1b2b20;
+}
+
+.sidebar-nav li i,
+.sidebar-nav li a {
+    color: #f2eeda;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #FFFAEC;
+    padding: 2rem;
+    overflow-y: auto; 
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Tombol Aksi Utama (misal: Jadwal Baru) */
+.btn-primary-action {
+    background-color: #1b2b20;
+    color: #f2eeda;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn-primary-action:hover {
+    background-color: #45a049;
+}
+
+/* Tombol sekunder (misal: Batal di form) */
+.btn-secondary-action { 
+    background-color: #808080;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.6rem 1rem; /* Disesuaikan dengan tombol simpan di form */
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.btn-secondary-action:hover {
+    background-color: #696969;
+}
+
+
+.header-icon {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.header-icon:hover {
+    color: #1b2b20;
+}
+.profile-icon {
+    font-size: 2rem;
+}
+
+/* Profile Dropdown (Sama seperti di main_dashboard.css) */
+.profile-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none; position: absolute; background-color: #FFFFFF;
+    min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000; /* Pastikan di atas konten lain jika perlu */
+    right: 0; top: calc(100% + 10px);
+    border-radius: 8px; overflow: hidden;
+}
+.dropdown-menu a { color: #333; padding: 12px 16px; text-decoration: none; display: block; transition: background-color 0.3s ease; font-size: 0.95rem; }
+.dropdown-menu a:hover { background-color: #E0E0E0; }
+.dropdown-menu hr { border: none; border-top: 1px solid #D9D9D9; margin: 5px 0; }
+.dropdown-menu.show { display: block; }
+
+/* Card Style Dasar (Sama seperti di main_dashboard.css) */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.card h3 { /* Judul di dalam card, misal "Daftar Jadwal Anda" */
+    font-size: 1.4rem; /* Disesuaikan dengan contoh visual */
+    color: #333;
+    margin-bottom: 1.5rem; /* Jarak lebih ke tabel */
+    font-weight: 600;
+}
+
+/* --- CSS KHUSUS UNTUK HALAMAN DAFTAR JADWAL --- */
+
+.schedule-list-section {
+    margin-top: 0; 
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px; 
+}
+
+.schedule-table th,
+.schedule-table td {
+    vertical-align: middle;
+    padding: 10px 12px; /* Padding sel tabel sedikit lebih kecil */
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 0.9rem; /* Font isi tabel */
+}
+
+.schedule-table th {
+    background-color: #F8F8F8;
+    color: #444; /* Warna header tabel sedikit lebih soft */
+    font-weight: 600; /* Atau 500 */
+    font-size: 0.85rem; 
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f5f5f5; /* Warna hover lebih soft */
+}
+
+.action-cell {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Jarak antar tombol aksi lebih rapat */
+    justify-content: flex-start; 
+    min-width: 100px; 
+    white-space: nowrap; 
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem; /* Ukuran ikon tombol aksi */
+    color: #777; /* Warna ikon default lebih soft */
+    transition: color 0.2s ease, transform 0.2s ease;
+    padding: 6px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+}
+.action-btn:hover { /* Warna ikon saat tombol di-hover (general) */
+    color: #333;
+}
+.edit-btn:hover i { color: #007bff !important; } /* Warna spesifik ikon saat hover */
+.view-btn:hover i { color: #28a745 !important; }
+.delete-btn:hover i { color: #dc3545 !important; }
+
+/* Kontainer dan Dropdown Aksi Samping */
+.action-dropdown-container {
+    position: relative;
+    display: inline-block; 
+}
+
+.action-dropdown {
+    display: none; 
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 340px; /* Lebar dropdown disesuaikan */
+    max-width: 420px;
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.15); /* Shadow lebih halus */
+    z-index: 100; /* Pastikan di atas konten tabel lain */
+    top: -15px; /* Posisi sedikit ke atas dari tombol, sesuaikan */
+    left: calc(100% + 8px); /* Muncul di samping kanan tombol, dengan jarak */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 1.2rem 1.5rem; /* Padding dalam dropdown */
+    color: #333;
+    text-align: left;
+}
+.action-dropdown.show {
+    display: block;
+}
+
+/* Untuk Dropdown Tambah Jadwal Baru yang mungkin diposisikan fixed oleh JS */
+div.action-dropdown[style*="fixed"] { 
+    /* Style ini akan berlaku jika JS menambahkan inline style "position: fixed" */
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.action-dropdown h4 {
+    font-size: 1.25rem; /* Ukuran judul di dropdown */
+    margin-top: 0; 
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #f0f0f0; /* Garis bawah judul lebih soft */
+    padding-bottom: 0.8rem;
+}
+
+.action-dropdown .close-dropdown-btn {
+    color: #999; /* Tombol close lebih soft */
+    position: absolute;
+    top: 12px; /* Disesuaikan dengan padding dropdown */
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 5px;
+}
+.action-dropdown .close-dropdown-btn:hover {
+    color: #555;
+}
+
+/* Form dalam Dropdown Edit (Tata Letak Field Horizontal) */
+.edit-schedule-form .form-field-group {
+    display: flex;
+    align-items: baseline; 
+    margin-bottom: 1rem; /* Jarak antar field group */
+    gap: 10px; 
+}
+.edit-schedule-form label {
+    flex-basis: 110px;  /* Lebar label */
+    flex-shrink: 0;    
+    font-weight: 500;
+    font-size: 0.88rem; /* Ukuran font label */
+    margin-bottom: 0;  
+    line-height: 1.5; 
+    text-align: right; 
+    padding-right: 8px; /* Jarak dari teks label ke input */
+    color: #454545;
+}
+.edit-schedule-form input[type="text"],
+.edit-schedule-form input[type="date"],
+.edit-schedule-form input[type="time"],
+.edit-schedule-form input[type="color"],
+.edit-schedule-form textarea {
+    width: 100%; 
+    flex-grow: 1; 
+    padding: 8px 10px; /* Padding input */
+    margin-bottom: 0; 
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #333;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+.edit-schedule-form input[type="color"] {
+    height: 38px; 
+    padding: 2px;
+}
+.edit-schedule-form textarea {
+    resize: vertical;
+    min-height: 60px; 
+    line-height: 1.5; 
+}
+.edit-schedule-form input:focus,
+.edit-schedule-form textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.15rem rgba(76,175,80,.2);
+    outline: none;
+}
+.edit-schedule-form .pose-count-info {
+    font-size: 0.8rem; 
+    color: #666;
+    margin-bottom: 1rem; 
+    margin-top: -0.3rem; 
+    /* (lebar label + gap + padding kanan label), sesuaikan dengan flex-basis label dan gap */
+    padding-left: calc(110px + 10px + 8px); 
+    text-align: left;
+}
+.edit-schedule-form .btn-primary-action { /* Tombol simpan di form */
+    width: 100%;
+    margin-top: 1.2rem; 
+    padding: 0.7rem 1rem; 
+    border-radius: 8px; 
+}
+
+/* Konten Detail dalam View Dropdown */
+.view-dropdown p {
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444;
+}
+.view-dropdown p strong {
+    color: #333;
+    font-weight: 600; 
+    margin-right: 5px;
+}
+.view-dropdown ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+    padding-left: 5px;
+    color: #444;
+}
+.view-dropdown ul li {
+    margin-bottom: 3px;
+}
+
+/* main_jadwal.css atau file CSS Anda yang relevan */
+
+/* ... (style lain) ... */
+
+.accordion-content-wrapper { /* Ini adalah kelas generik yang saya usulkan,
+                                   atau bisa juga .schedule-detail-content-wrapper / .schedule-edit-form-wrapper */
+    padding: 15px 20px; 
+    max-height: 0; /* Awalnya tinggi maksimum 0 (tersembunyi) */
+    overflow: hidden; /* Sembunyikan konten yang melebihi max-height */
+    box-sizing: border-box;
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Contoh jika Anda punya kelas spesifik: */
+.schedule-detail-content-wrapper,
+.schedule-edit-form-wrapper {
+    padding: 15px 20px; /* Sesuaikan padding per tipe jika perlu */
+    max-height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: max-height 0.5s ease-in-out; /* Pastikan ini ada */
+}
+/* Untuk wrapper form edit di main_jadwal.js terakhir, paddingnya: 20px 25px */
+/* Jika .schedule-edit-form-wrapper memiliki padding berbeda, pastikan transisinya juga diatur */

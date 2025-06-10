@@ -1,0 +1,321 @@
+[debug] [2025-05-29T12:19:56.462Z] ----------------------------------------------------------------------
+[debug] [2025-05-29T12:19:56.472Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ghefira\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-05-29T12:19:56.472Z] CLI Version:   14.4.0
+[debug] [2025-05-29T12:19:56.472Z] Platform:      win32
+[debug] [2025-05-29T12:19:56.473Z] Node Version:  v22.16.0
+[debug] [2025-05-29T12:19:56.473Z] Time:          Thu May 29 2025 19:19:56 GMT+0700 (Western Indonesia Time)
+[debug] [2025-05-29T12:19:56.473Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-29T12:19:56.493Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-29T12:19:56.493Z] > authorizing via signed-in user (ghefathaya@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Ghefira\Downloads\WEB YOFI
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-29T12:21:35.865Z] Checked if tokens are valid: false, expires at: 1748522059897
+[debug] [2025-05-29T12:21:35.867Z] Checked if tokens are valid: false, expires at: 1748522059897
+[debug] [2025-05-29T12:21:35.868Z] > refreshing access token with scopes: []
+[debug] [2025-05-29T12:21:35.880Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-29T12:21:35.880Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-29T12:21:36.594Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-29T12:21:36.594Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-29T12:21:36.609Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-05-29T12:21:37.229Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-05-29T12:21:37.229Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project yofi-191421 (YoFi) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-05-29T12:21:38.837Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:38.838Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:38.838Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/yofi-191421/billingInfo [none]
+[debug] [2025-05-29T12:21:40.208Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/yofi-191421/billingInfo 200
+[debug] [2025-05-29T12:21:40.208Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/yofi-191421/billingInfo {"name":"projects/yofi-191421/billingInfo","projectId":"yofi-191421","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-05-29T12:21:40.211Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:40.211Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:40.211Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/sqladmin.googleapis.com [none]
+[debug] [2025-05-29T12:21:40.211Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/sqladmin.googleapis.com x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:21:41.593Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/sqladmin.googleapis.com 200
+[debug] [2025-05-29T12:21:41.594Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/sqladmin.googleapis.com [omitted]
+[info] +  dataconnect: required API sqladmin.googleapis.com is enabled 
+[debug] [2025-05-29T12:21:41.596Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:41.596Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:41.596Z] >>> [apiv2][query] GET https://firebasedataconnect.googleapis.com/v1/projects/yofi-191421/locations/-/services [none]
+[debug] [2025-05-29T12:21:43.678Z] <<< [apiv2][status] GET https://firebasedataconnect.googleapis.com/v1/projects/yofi-191421/locations/-/services 200
+[debug] [2025-05-29T12:21:43.678Z] <<< [apiv2][body] GET https://firebasedataconnect.googleapis.com/v1/projects/yofi-191421/locations/-/services {}
+[info] i  dataconnect\dataconnect.yaml is unchanged 
+[info] i  dataconnect\schema\schema.gql is unchanged 
+[info] i  dataconnect\connector\connector.yaml is unchanged 
+[info] i  dataconnect\connector\queries.gql is unchanged 
+[info] i  dataconnect\connector\mutations.gql is unchanged 
+[info] i  If you'd like to add the generated SDK to your app later, run firebase init dataconnect:sdk 
+[info] i  If you'd like to provision a CloudSQL Postgres instance on the Firebase Data Connect no-cost trial:
+1. Please upgrade to the pay-as-you-go (Blaze) billing plan. Visit the following page:
+     https://console.firebase.google.com/project/yofi-191421/usage/details
+2. Run firebase init dataconnect again to configure the Cloud SQL instance.
+3. Run firebase deploy --only dataconnect to deploy your Data Connect service. 
+[info] 
+=== Firestore Setup
+[debug] [2025-05-29T12:21:43.701Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:43.701Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:43.701Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/firestore.googleapis.com [none]
+[debug] [2025-05-29T12:21:43.701Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/firestore.googleapis.com x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:21:45.321Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/firestore.googleapis.com 200
+[debug] [2025-05-29T12:21:45.322Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/firestore.googleapis.com [omitted]
+[debug] [2025-05-29T12:21:45.322Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:45.322Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:45.322Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default) [none]
+[debug] [2025-05-29T12:21:46.086Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default) 200
+[debug] [2025-05-29T12:21:46.086Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default) {"name":"projects/yofi-191421/databases/(default)","uid":"e387f36f-dcf4-41cb-9369-23cabac7a445","createTime":"2025-05-29T11:37:56.539860Z","updateTime":"2025-05-29T11:37:56.539860Z","locationId":"asia-southeast2","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-05-29T11:37:56.539860Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"zet","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"etag":"IJOa1rrVyI0DMNmApPjLyI0D"}
+[debug] [2025-05-29T12:21:46.087Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-29T12:21:46.087Z] > authorizing via signed-in user (ghefathaya@gmail.com)
+[debug] [2025-05-29T12:21:46.087Z] [iam] checking project yofi-191421 for permissions ["firebase.projects.get"]
+[debug] [2025-05-29T12:21:46.088Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:46.088Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:46.088Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions [none]
+[debug] [2025-05-29T12:21:46.088Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:21:46.088Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-29T12:21:47.283Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions 200
+[debug] [2025-05-29T12:21:47.283Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-05-29T12:21:51.161Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:51.161Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:51.162Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/yofi-191421/releases pageSize=10&pageToken=
+[debug] [2025-05-29T12:21:52.517Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/yofi-191421/releases 200
+[debug] [2025-05-29T12:21:52.517Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/yofi-191421/releases {"releases":[{"name":"projects/yofi-191421/releases/cloud.firestore","rulesetName":"projects/yofi-191421/rulesets/a80ee00f-c686-4943-a68c-505f7c49f455","createTime":"2025-05-29T11:38:03.354919Z","updateTime":"2025-05-29T11:38:03.354919Z"}]}
+[debug] [2025-05-29T12:21:52.518Z] Found ruleset: projects/yofi-191421/rulesets/a80ee00f-c686-4943-a68c-505f7c49f455
+[debug] [2025-05-29T12:21:52.518Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:52.518Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:52.518Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/yofi-191421/rulesets/a80ee00f-c686-4943-a68c-505f7c49f455 [none]
+[debug] [2025-05-29T12:21:53.755Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/yofi-191421/rulesets/a80ee00f-c686-4943-a68c-505f7c49f455 200
+[debug] [2025-05-29T12:21:53.755Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/yofi-191421/rulesets/a80ee00f-c686-4943-a68c-505f7c49f455 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-05-29T12:21:56.485Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:56.485Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:56.486Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:56.486Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:21:56.487Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2025-05-29T12:21:56.491Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2025-05-29T12:21:56.697Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2025-05-29T12:21:56.697Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/yofi-191421/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2025-05-29T12:21:56.734Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2025-05-29T12:21:56.735Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/yofi-191421/databases/(default)/collectionGroups/-/indexes {}
+[info] 
+=== Genkit Setup
+[debug] [2025-05-29T12:22:07.961Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-29T12:22:07.961Z] > authorizing via signed-in user (ghefathaya@gmail.com)
+[debug] [2025-05-29T12:22:07.961Z] [iam] checking project yofi-191421 for permissions ["firebase.projects.get"]
+[debug] [2025-05-29T12:22:07.961Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:22:07.961Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:22:07.962Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions [none]
+[debug] [2025-05-29T12:22:07.962Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:22:07.962Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-29T12:22:09.049Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions 200
+[debug] [2025-05-29T12:22:09.049Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-29T12:22:09.049Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:22:09.050Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:22:09.050Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:22:09.050Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:22:09.050Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-29T12:22:09.050Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:22:09.051Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-05-29T12:22:09.051Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:22:10.419Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com 200
+[debug] [2025-05-29T12:22:10.419Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-05-29T12:22:10.477Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-29T12:22:10.477Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] i  functions/.eslintrc.js is unchanged 
+[info] i  functions/tsconfig.dev.json is unchanged 
+[info] +  Wrote functions/tsconfig.json 
+[info] i  functions/src/index.ts is unchanged 
+[info] i  functions/.gitignore is unchanged 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 1.10.0
+ 
+[info] i  genkit: Installing NPM packages for genkit 
+[info] +  genkit: Successfully installed NPM packages 
+[info] i  genkit: Updating tsconfig.json 
+[info] +  genkit: Successfully updated tsconfig.json 
+[info] i  genkit: Updating package.json 
+[info] +  genkit: Successfully updated package.json 
+[info] i  genkit: Generating sample file 
+[info] +  genkit: Successfully generated sample file (src/genkit-sample.ts) 
+[info] 
+[info] 
+Login to Google Cloud using:
+[info]     gcloud auth application-default login --project yofi-191421
+
+[info] Then start the Genkit developer experience by running:
+[info]     cd functions && npm run genkit:start
+[info] 
+=== Functions Setup
+[debug] [2025-05-29T12:23:16.305Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-29T12:23:16.306Z] > authorizing via signed-in user (ghefathaya@gmail.com)
+[debug] [2025-05-29T12:23:16.307Z] [iam] checking project yofi-191421 for permissions ["firebase.projects.get"]
+[debug] [2025-05-29T12:23:16.313Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:16.313Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:16.315Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions [none]
+[debug] [2025-05-29T12:23:16.315Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:23:16.316Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-29T12:23:17.502Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions 200
+[debug] [2025-05-29T12:23:17.502Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-05-29T12:23:17.503Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:17.503Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:17.503Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:17.503Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:17.503Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-29T12:23:17.503Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:23:17.505Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-05-29T12:23:17.505Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/yofi-191421
+[debug] [2025-05-29T12:23:19.254Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com 200
+[debug] [2025-05-29T12:23:19.254Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-05-29T12:23:19.502Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-29T12:23:19.502Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/yofi-191421/services/cloudfunctions.googleapis.com [omitted]
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] i  yofi/package.json is unchanged 
+[info] i  yofi/.eslintrc.js is unchanged 
+[info] i  yofi/index.js is unchanged 
+[info] i  yofi/.gitignore is unchanged 
+[info] 
+=== Hosting Setup
+[debug] [2025-05-29T12:23:31.997Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:31.997Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:23:31.999Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yofi-191421 [none]
+[debug] [2025-05-29T12:23:32.952Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yofi-191421 200
+[debug] [2025-05-29T12:23:32.952Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yofi-191421 {"projectId":"yofi-191421","projectNumber":"764688667603","displayName":"YoFi","name":"projects/yofi-191421","resources":{"hostingSite":"yofi-191421"},"state":"ACTIVE","etag":"1_23a2b85a-22bb-4a51-9b73-8c4b8138404d"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-05-29T12:23:46.513Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-05-29T12:23:46.661Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-05-29T12:23:46.661Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.8.1","browserURL":"https://www.gstatic.com/firebasejs/11.8.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.8.1/firebase.tgz"},"live":{"version":"11.8","browserURL":"https://www.gstatic.com/firebasejs/live/11.8/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.8/firebase.tgz"},"components":{"ai":"https://www.gstatic.com/firebasejs/11.8.1/firebase-ai.js","analytics":"https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.8.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.8.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.8.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.8.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.8.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.8.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.8.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.8.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.8.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.8.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.8.1/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.8.1/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.8.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\Ghefira\Downloads\WEB YOFI is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=632880869&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-05-29T12:26:14.753Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-05-29T12:26:14.759Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-05-29T12:26:16.151Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-05-29T12:26:16.151Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-05-29T12:26:16.169Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-05-29T12:26:16.722Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-05-29T12:26:16.722Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"athaya1904","id":146912498,"node_id":"U_kgDOCMG08g","avatar_url":"https://avatars.githubusercontent.com/u/146912498?v=4","gravatar_id":"","url":"https://api.github.com/users/athaya1904","html_url":"https://github.com/athaya1904","followers_url":"https://api.github.com/users/athaya1904/followers","following_url":"https://api.github.com/users/athaya1904/following{/other_user}","gists_url":"https://api.github.com/users/athaya1904/gists{/gist_id}","starred_url":"https://api.github.com/users/athaya1904/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/athaya1904/subscriptions","organizations_url":"https://api.github.com/users/athaya1904/orgs","repos_url":"https://api.github.com/users/athaya1904/repos","events_url":"https://api.github.com/users/athaya1904/events{/privacy}","received_events_url":"https://api.github.com/users/athaya1904/received_events","type":"User","user_view_type":"private","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":2,"public_gists":0,"followers":0,"following":0,"created_at":"2023-10-04T04:50:10Z","updated_at":"2025-05-29T12:25:45Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":316,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as athaya1904 
+[info] 
+[debug] [2025-05-29T12:29:27.974Z] >>> [apiv2][query] GET https://api.github.com/repos/athaya1904/yofi/actions/secrets/public-key type=owner
+[debug] [2025-05-29T12:29:28.793Z] <<< [apiv2][status] GET https://api.github.com/repos/athaya1904/yofi/actions/secrets/public-key 200
+[debug] [2025-05-29T12:29:28.794Z] <<< [apiv2][body] GET https://api.github.com/repos/athaya1904/yofi/actions/secrets/public-key {"key_id":"3380204578043523366","key":"GH9HsGkG/VZqDYtlH8LmjVRXlcibkNV2PWGHSLGW9yc="}
+[debug] [2025-05-29T12:29:28.799Z] >>> [apiv2][query] GET https://api.github.com/repos/athaya1904/yofi [none]
+[debug] [2025-05-29T12:29:29.512Z] <<< [apiv2][status] GET https://api.github.com/repos/athaya1904/yofi 200
+[debug] [2025-05-29T12:29:29.512Z] <<< [apiv2][body] GET https://api.github.com/repos/athaya1904/yofi {"id":992605265,"node_id":"R_kgDOOyn0UQ","name":"yofi","full_name":"athaya1904/yofi","private":false,"owner":{"login":"athaya1904","id":146912498,"node_id":"U_kgDOCMG08g","avatar_url":"https://avatars.githubusercontent.com/u/146912498?v=4","gravatar_id":"","url":"https://api.github.com/users/athaya1904","html_url":"https://github.com/athaya1904","followers_url":"https://api.github.com/users/athaya1904/followers","following_url":"https://api.github.com/users/athaya1904/following{/other_user}","gists_url":"https://api.github.com/users/athaya1904/gists{/gist_id}","starred_url":"https://api.github.com/users/athaya1904/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/athaya1904/subscriptions","organizations_url":"https://api.github.com/users/athaya1904/orgs","repos_url":"https://api.github.com/users/athaya1904/repos","events_url":"https://api.github.com/users/athaya1904/events{/privacy}","received_events_url":"https://api.github.com/users/athaya1904/received_events","type":"User","user_view_type":"public","site_admin":false},"html_url":"https://github.com/athaya1904/yofi","description":null,"fork":false,"url":"https://api.github.com/repos/athaya1904/yofi","forks_url":"https://api.github.com/repos/athaya1904/yofi/forks","keys_url":"https://api.github.com/repos/athaya1904/yofi/keys{/key_id}","collaborators_url":"https://api.github.com/repos/athaya1904/yofi/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/athaya1904/yofi/teams","hooks_url":"https://api.github.com/repos/athaya1904/yofi/hooks","issue_events_url":"https://api.github.com/repos/athaya1904/yofi/issues/events{/number}","events_url":"https://api.github.com/repos/athaya1904/yofi/events","assignees_url":"https://api.github.com/repos/athaya1904/yofi/assignees{/user}","branches_url":"https://api.github.com/repos/athaya1904/yofi/branches{/branch}","tags_url":"https://api.github.com/repos/athaya1904/yofi/tags","blobs_url":"https://api.github.com/repos/athaya1904/yofi/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/athaya1904/yofi/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/athaya1904/yofi/git/refs{/sha}","trees_url":"https://api.github.com/repos/athaya1904/yofi/git/trees{/sha}","statuses_url":"https://api.github.com/repos/athaya1904/yofi/statuses/{sha}","languages_url":"https://api.github.com/repos/athaya1904/yofi/languages","stargazers_url":"https://api.github.com/repos/athaya1904/yofi/stargazers","contributors_url":"https://api.github.com/repos/athaya1904/yofi/contributors","subscribers_url":"https://api.github.com/repos/athaya1904/yofi/subscribers","subscription_url":"https://api.github.com/repos/athaya1904/yofi/subscription","commits_url":"https://api.github.com/repos/athaya1904/yofi/commits{/sha}","git_commits_url":"https://api.github.com/repos/athaya1904/yofi/git/commits{/sha}","comments_url":"https://api.github.com/repos/athaya1904/yofi/comments{/number}","issue_comment_url":"https://api.github.com/repos/athaya1904/yofi/issues/comments{/number}","contents_url":"https://api.github.com/repos/athaya1904/yofi/contents/{+path}","compare_url":"https://api.github.com/repos/athaya1904/yofi/compare/{base}...{head}","merges_url":"https://api.github.com/repos/athaya1904/yofi/merges","archive_url":"https://api.github.com/repos/athaya1904/yofi/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/athaya1904/yofi/downloads","issues_url":"https://api.github.com/repos/athaya1904/yofi/issues{/number}","pulls_url":"https://api.github.com/repos/athaya1904/yofi/pulls{/number}","milestones_url":"https://api.github.com/repos/athaya1904/yofi/milestones{/number}","notifications_url":"https://api.github.com/repos/athaya1904/yofi/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/athaya1904/yofi/labels{/name}","releases_url":"https://api.github.com/repos/athaya1904/yofi/releases{/id}","deployments_url":"https://api.github.com/repos/athaya1904/yofi/deployments","created_at":"2025-05-29T12:29:14Z","updated_at":"2025-05-29T12:29:17Z","pushed_at":"2025-05-29T12:29:14Z","git_url":"git://github.com/athaya1904/yofi.git","ssh_url":"git@github.com:athaya1904/yofi.git","clone_url":"https://github.com/athaya1904/yofi.git","svn_url":"https://github.com/athaya1904/yofi","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"enabled"},"secret_scanning_push_protection":{"status":"enabled"},"dependabot_security_updates":{"status":"disabled"},"secret_scanning_non_provider_patterns":{"status":"disabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"network_count":0,"subscribers_count":0}
+[debug] [2025-05-29T12:29:29.551Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:29.551Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:29.552Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts [none]
+[debug] [2025-05-29T12:29:29.552Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts {"accountId":"github-action-992605265","serviceAccount":{"displayName":"GitHub Actions (athaya1904/yofi)","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository athaya1904/yofi"}}
+[debug] [2025-05-29T12:29:31.349Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts 200
+[debug] [2025-05-29T12:29:31.349Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts [omitted]
+[debug] [2025-05-29T12:29:31.351Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:31.351Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:31.352Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:31.352Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:31.352Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com [none]
+[debug] [2025-05-29T12:29:31.352Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:getIamPolicy [none]
+[debug] [2025-05-29T12:29:32.667Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:getIamPolicy 200
+[debug] [2025-05-29T12:29:32.667Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:getIamPolicy {"version":1,"etag":"BwY2RMBBnvA=","bindings":[{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-764688667603@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:yofi-191421@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-764688667603@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-764688667603@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-764688667603@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:ghefathaya@gmail.com"]}]}
+[debug] [2025-05-29T12:29:32.902Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com 200
+[debug] [2025-05-29T12:29:32.902Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com {"name":"projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com","projectId":"yofi-191421","uniqueId":"118084590241261313563","email":"github-action-992605265@yofi-191421.iam.gserviceaccount.com","displayName":"GitHub Actions (athaya1904/yofi)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository athaya1904/yofi","oauth2ClientId":"118084590241261313563"}
+[debug] [2025-05-29T12:29:32.906Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:32.906Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:32.906Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:setIamPolicy [none]
+[debug] [2025-05-29T12:29:32.906Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:setIamPolicy {"policy":{"version":1,"etag":"BwY2RMBBnvA=","bindings":[{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-764688667603@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:yofi-191421@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-764688667603@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-764688667603@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-764688667603@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:ghefathaya@gmail.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2025-05-29T12:29:34.286Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:setIamPolicy 200
+[debug] [2025-05-29T12:29:34.287Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yofi-191421:setIamPolicy {"version":1,"etag":"BwY2RXM2LfI=","bindings":[{"role":"roles/cloudfunctions.developer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-764688667603@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:yofi-191421@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:service-764688667603@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-fbsvc@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-764688667603@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-764688667603@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-fbsvc@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:ghefathaya@gmail.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.serviceUsageConsumer","members":["serviceAccount:github-action-992605265@yofi-191421.iam.gserviceaccount.com"]}]}
+[debug] [2025-05-29T12:29:34.287Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:34.288Z] Checked if tokens are valid: true, expires at: 1748524895594
+[debug] [2025-05-29T12:29:34.288Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com/keys [none]
+[debug] [2025-05-29T12:29:34.288Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com/keys {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2025-05-29T12:29:35.175Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com/keys 200
+[debug] [2025-05-29T12:29:35.175Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com/keys {"name":"projects/yofi-191421/serviceAccounts/github-action-992605265@yofi-191421.iam.gserviceaccount.com/keys/67e86963cac957601fdf440a114641046be59020","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE","privateKeyData":"ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAieW9maS0xOTE0MjEiLAogICJwcml2YXRlX2tleV9pZCI6ICI2N2U4Njk2M2NhYzk1NzYwMWZkZjQ0MGExMTQ2NDEwNDZiZTU5MDIwIiwKICAicHJpdmF0ZV9rZXkiOiAiLS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tXG5NSUlFdmdJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLZ3dnZ1NrQWdFQUFvSUJBUUNadmVzWG5MUDd3em1uXG5kQzM3dnZrMmU4dGxuMW9QRWt2MlBEamllaDNXQ28vb2NNcmcrODlES3dYWWdwUklIYXZLODY4K3NwYW15Tnl6XG4xMnpMbXVkTW4zbm42aytvRk5tTnhYWWxmNEdjSnk5VG9JNWlBYkpoelIyT2M1SU51aVIySGF3OEVkbHdXdnE5XG5FNFJ3YzRGNlVXcHpFWXJXWmVQSjNncDdQNmlrWmVXOWxFSUw2NjkvMVZHbW93L2h2V3BXc0RhRDVxeWRQTTU1XG5jRC96OFRlYlVleDlCWlF5Ymh6MEU5WDl1YUxPZWdHSU9jTzlmN0F2b0s4anEyeUdxbHd0OXJkNGo5bDE3QThwXG5NYTBFNkZDbmZ2d0pPUThOSUE0YVA3YnVYUTJYRzdzcXpkUmlrL2k1WUFJb0xGc3VHeEt1bjZ2YlFrdXVsNlF1XG5oWW0vK0lhTkFnTUJBQUVDZ2dFQURkU2lHbldWN0tXd0dzcDRWYnNZVGJJb1RUREZsLzIwRllFSWF3YVF1bHpDXG5TTnBYS3Nac2E0dVF4aW1SNHl0WTlTZFhIdDBjUGpTZXFpMFpZTVFRTEpQMVh3dGJEMWRlYm9NU3ZmTUtvV0xqXG5DMW1Za2txNmxleGlaczJRL3NLS25WNEEvOStjWmgrbmlrWk02VWsvbnU5NUU4UmNJbURlV2dUNEdkRzV2emRwXG55cjdsMW5CbWd6WjgwYXZMUVRqRjRlbnh3YU85QjZMVDlhblJ2TkpBNnpaL0QxRDhPeTlhK3Ixc29uSlhOb3NUXG5sZVVMcmZBcVdieG9ucmJhTncvWXhvVFRyNzFXYTA5VmE2Z1V5WW55SlJWam1tZlRNaWo5b2hzK0VTUko0V2ZNXG5TZmMzT1A2ZEFPQlBIUGlITlRnSUluVjlxNmpEZE5qWGsxRXpPbE5OandLQmdRREkxa0RKbGR5RUdlYkZMTnlpXG4xYU5SZm90SXZLM3ZOMWg3dGpYL0dBVzB4dm9iald4ZkJtT29ma2NELzJXSmNkSmtIZXVMQUkrbVlORXE4VnF1XG5VT0xpYnJhYk00TFFSdUJXMmZNVHIzbUZxOE9ucDlPK2pmMGtodjdkWHZoM09iYWlFZW1XYVNaaHlqakNYMHE2XG5HTk8yR3oyWE1SYU8rQ2t5WUpZeHc1NWN4d0tCZ1FERCtETTQzbXF5QnFCRFJOU3F4a21sMFNwT1FkQlFBTWhQXG44ZWIzY2RIcGo5R21PZHc2Q0QyTDBqU0ZRNzljVFJvRUp0Y2F5RUtRenp2TFNoN0pDd2xvMHFmSGFyeEJvQkx0XG5OZG9BcFVRZFdTYk9tVitlRXZjaW1jc3NxU3lYRGpRcGl1TEI4TUE3MkZiUlhuei9IVmhCTFZyRmlBQkNNSlcwXG5qS0pxajNNbUN3S0JnUUN5UkZ0bGs3d1ZGZGlkRkdFVHVJWXJCQ1FtQURSenJiREF2cy9YQ2orbVl5Z0Y1TlpZXG4wcGNMTEd0a3hRSWZxZ1NTRVd6T0NVVjQ3Vjg4dXRjKysxVW9vQlUrVmM2N2lPNEFxWnoxMEVBUndwRDg5QjhqXG5lVzFGU3Y1WENNR0xNcE5GOEpoaWhoc25taFFmays0RW1aenllK09EbkhMbG5La1VxbDhtOVBoUWFRS0JnRlZpXG5zSmJIdWo5bFNiRGxyYS9YQThIZStBcnUvQi9QcDNmRjA3ZmUvUEpDT3J1dG5Eb2cyd2d3QjdoRkEzenBEenZkXG4zSDJMNGcwTWJtWXVIbW5FaUU0Rzh4bWRkUGMzRXVnT1BiVm9UTnhvdXRMcjJ0Q2FQTm56bnFZUDlDREJESk5KXG5NM0lEUHc4VVBRZXVudEhkYkZYQnVEbzIvcjNZUTNKT2tIblRsUDF2QW9HQkFJYTF5ZVNLanR4WVJzWElEcGM4XG5pYzZsbVFVZzFUUWRUYnNDN25oYnBYWlBzV3RvaWlka05sczhsNWdYR05uQTV0QWJCL0swaE5CZzNFRmFRNlRPXG5sVFljU0M3VmRkUlVZbEs2MnJzSWFKVHBsMGhQSUNDYUhiSUtJVlUvWXBPVHAwSDAvbDErNXgzcG52ZmRpKzZvXG5EMW9Nd2VxcVM2cnA0cHJDL3hPMVBYTHFcbi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS1cbiIsCiAgImNsaWVudF9lbWFpbCI6ICJnaXRodWItYWN0aW9uLTk5MjYwNTI2NUB5b2ZpLTE5MTQyMS5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsCiAgImNsaWVudF9pZCI6ICIxMTgwODQ1OTAyNDEyNjEzMTM1NjMiLAogICJhdXRoX3VyaSI6ICJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vby9vYXV0aDIvYXV0aCIsCiAgInRva2VuX3VyaSI6ICJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsCiAgImF1dGhfcHJvdmlkZXJfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjEvY2VydHMiLAogICJjbGllbnRfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9yb2JvdC92MS9tZXRhZGF0YS94NTA5L2dpdGh1Yi1hY3Rpb24tOTkyNjA1MjY1JTQweW9maS0xOTE0MjEuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLAogICJ1bml2ZXJzZV9kb21haW4iOiAiZ29vZ2xlYXBpcy5jb20iCn0K","validAfterTime":"2025-05-29T12:29:34Z","validBeforeTime":"9999-12-31T23:59:59Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"USER_MANAGED"}
+[info] 
+[info] +  Created service account github-action-992605265 with Firebase Hosting admin permissions. 
+[debug] [2025-05-29T12:29:35.195Z] >>> [apiv2][query] PUT https://api.github.com/repos/athaya1904/yofi/actions/secrets/FIREBASE_SERVICE_ACCOUNT_YOFI_191421 [none]
+[debug] [2025-05-29T12:29:35.195Z] >>> [apiv2][body] PUT https://api.github.com/repos/athaya1904/yofi/actions/secrets/FIREBASE_SERVICE_ACCOUNT_YOFI_191421 {"encrypted_value":"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","key_id":"3380204578043523366"}
+[debug] [2025-05-29T12:29:35.693Z] <<< [apiv2][status] PUT https://api.github.com/repos/athaya1904/yofi/actions/secrets/FIREBASE_SERVICE_ACCOUNT_YOFI_191421 201
+[debug] [2025-05-29T12:29:35.693Z] <<< [apiv2][body] PUT https://api.github.com/repos/athaya1904/yofi/actions/secrets/FIREBASE_SERVICE_ACCOUNT_YOFI_191421 {}
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_YOFI_191421. 
+[info] i  You can manage your secrets at https://github.com/athaya1904/yofi/settings/secrets. 
+[info] 
+[info] 
+[info] +  Created workflow file C:\Users\Ghefira\Downloads\WEB YOFI\.github/workflows/firebase-hosting-pull-request.yml 
+[info] 
+[info] +  Created workflow file C:\Users\Ghefira\Downloads\WEB YOFI\.github/workflows/firebase-hosting-merge.yml 
+[info] 
+[info] i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] i  Action required: Push any new workflow file(s) to your repo 
+[info] 
+=== Storage Setup
+[info] 
+[info] Firebase Storage Security Rules allow you to define how and when to allow
+[info] uploads and downloads. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] +  Wrote storage.rules 
+[info] 
+=== Emulators Setup
+[info] i  firestore: downloading cloud-firestore-emulator-v1.19.8.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.19.8.jar..."}}
+[debug] [2025-05-29T12:34:09.897Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.8.jar 
+[debug] [2025-05-29T12:34:12.137Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.8.jar 200
+[debug] [2025-05-29T12:34:12.137Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.19.8.jar [stream]

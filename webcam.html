@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoFi - Sesi Yoga</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .pose-timer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-top: 12px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            width: auto;
+            max-width: 300px;
+            display: inline-block;
+        }
+        .pose-timer.correct {
+            background: rgba(0, 255, 0, 0.8);
+        }
+        .pose-timer.incorrect {
+            background: rgba(255, 0, 0, 0.8);
+        }
+        .webcam-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .webcam-header .main-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+    
+    </style>
+    <link rel="stylesheet" href="/static/webcam.css"> </head>
+<body class="session-focus-page">
+    <div class="webcam-page-container">
+        <header class="webcam-header">
+            <h1 id="currentPoseNameDisplay" class="main-title">Mountain Pose</h1>
+            <div id="poseTimer" class="pose-timer incorrect"> Waktu ditahan: <span id="holdTime">0.0</span>s / <span id="targetTime">30.0</span>s
+            </div>
+            <button id="endSessionBtn" class="end-session-button">
+                <i class="fas fa-times"></i>Akhiri Sesi
+            </button>
+        </header>
+        <main class="webcam-main-content">
+            <div id="cvFeedPlaceholder" class="computer-vision-placeholder">
+                <img id="videoFeed" class="webcam-video" alt="Webcam Stream" src="image_8ef860.jpg" style="width:100%;height:100%;object-fit:contain;">
+                <canvas id="cvCanvas" class="webcam-canvas"></canvas>
+                <p id="connectionMessage">menghubungkan ke kamera...</p>
+            </div>
+            <div class="pose-feedback-area">
+                <p id="poseStatusMessage" class="pose-status">Silakan lakukan pose.</p>
+            </div>
+        </main>
+        <footer class="webcam-footer">
+            <button id="manualNextPoseButton" class="next-button">
+                Selanjutnya
+            </button>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="webcam.js"></script>
+</body>
+</html>

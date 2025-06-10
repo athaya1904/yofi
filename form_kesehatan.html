@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoFi - Form Kesehatan</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="main_jadwal.css"> <link rel="stylesheet" href="form_kesehatan.css"> </head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">YoFi</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><i class="fas fa-home"></i> <a href="main_dashboard.html">Beranda</a></li>
+                    <li><i class="fas fa-calendar-alt"></i> <a href="main_jadwal.html">Jadwal</a></li>
+                    <li><i class="fas fa-history"></i> <a href="main_riwayat.html">Riwayat</a></li>
+                    <li class="active"><i class="fas fa-heartbeat"></i> <a href="form_kesehatan.html">Form Kesehatan</a></li>
+                    <li><i class="fas fa-bell"></i> <a href="main_pengingat.html">Pengingat</a></li>
+                    <li><i class="fas fa-camera"></i> <a href="main_galeri_pose.html">Galeri Pose</a></li>
+                    <li><i class="fas fa-question-circle"></i> <a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h2>Form Kesehatan</h2>
+                <div class="header-actions">
+                    <button class="btn-primary-action" id="btnJadwalBaru">
+                        <i class="fas fa-plus"></i> Jadwal Baru
+                    </button>
+                    <i class="fas fa-bell header-icon"></i>
+                    <div class="profile-dropdown-container">
+                        <i class="fas fa-user-circle header-icon profile-icon" id="profileDropdownBtn"></i>
+                        <div class="dropdown-menu" id="profileDropdown">
+                            <a href="#">Profil Saya</a>
+                            <a href="#">Pengaturan</a>
+                            <hr>
+                            <a href="/static/landingpage.html" id="profileDropdownLogout">Keluar</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="health-form-section card">
+                <h3>Mohon isi form berikut dengan sejujur-jujurnya demi keamanan dan kenyamanan Anda selama sesi yoga.</h3>
+                <form id="healthForm">
+                    <div class="form-group">
+                        <legend>1. Apakah Anda memiliki perbedaan fisik yang terlihat (misalnya anggota tubuh tidak simetris, perbedaan panjang kaki/tangan, dll)?</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q1_fisik_beda" value="ya"> Ya</label>
+                            <label><input type="radio" name="q1_fisik_beda" value="tidak"> Tidak</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <legend>2. Apakah Anda pernah mengalami cedera sebelumnya?</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q2_cedera" value="ya"> Ya</label>
+                            <label><input type="radio" name="q2_cedera" value="tidak"> Tidak</label>
+                        </div>
+                        <div id="q2_cedera_detail_section" class="conditional-section">
+                            <label for="q2_bagian_cedera">Bagian tubuh yang mengalami cedera:</label>
+                            <select name="q2_bagian_cedera" id="q2_bagian_cedera" class="form-control">
+                                <option value="">Pilih bagian tubuh...</option>
+                                <option value="leher">Leher (cervical spine)</option>
+                                <option value="punggung_atas">Punggung atas (thoracic spine)</option>
+                                <option value="punggung_bawah">Punggung bawah (lumbar spine)</option>
+                                <option value="tulang_ekor">Tulang ekor (coccyx)</option>
+                                <option value="bahu">Bahu</option>
+                                <option value="pinggul">Pinggul</option>
+                                <option value="lutut">Lutut (jika memengaruhi postur punggung saat berlatih)</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                            <input type="text" name="q2_bagian_cedera_lainnya" id="q2_bagian_cedera_lainnya" class="form-control other-input" placeholder="Sebutkan bagian lainnya" style="display: none;">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <legend>3. Apakah Anda pernah menjalani operasi yang berkaitan dengan tulang, otot, atau saraf?</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q3_operasi" value="ya"> Ya</label>
+                            <label><input type="radio" name="q3_operasi" value="tidak"> Tidak</label>
+                        </div>
+                        <div id="q3_operasi_detail_section" class="conditional-section">
+                            <p>Apakah Anda telah mendapatkan izin dari dokter atau fisioterapis untuk melakukan aktivitas fisik seperti yoga?</p>
+                            <div class="radio-group">
+                                <label><input type="radio" name="q3_izin_dokter" value="ya"> Ya</label>
+                                <label><input type="radio" name="q3_izin_dokter" value="tidak"> Tidak</label>
+                            </div>
+                            <div id="q3_operasi_bagian_section" class="conditional-section" style="border-left: none; padding-left: 0;">
+                                <label for="q3_bagian_operasi">Bagian tubuh yang terkait operasi:</label>
+                                <select name="q3_bagian_operasi" id="q3_bagian_operasi" class="form-control">
+                                    <option value="">Pilih bagian tubuh...</option>
+                                    <option value="leher">Leher (cervical spine)</option>
+                                    <option value="punggung_atas">Punggung atas (thoracic spine)</option>
+                                    <option value="punggung_bawah">Punggung bawah (lumbar spine)</option>
+                                    <option value="tulang_ekor">Tulang ekor (coccyx)</option>
+                                    <option value="bahu">Bahu</option>
+                                    <option value="pinggul">Pinggul</option>
+                                    <option value="lutut">Lutut (jika memengaruhi postur punggung saat berlatih)</option>
+                                    <option value="lainnya">Lainnya</option>
+                                </select>
+                                <input type="text" name="q3_bagian_operasi_lainnya" id="q3_bagian_operasi_lainnya" class="form-control other-input" placeholder="Sebutkan bagian lainnya" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <legend>4. Apakah Anda memiliki riwayat kondisi postur seperti skoliosis, lordosis, kifosis, atau gangguan postur lainnya?</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q4_postur" value="ya"> Ya</label>
+                            <label><input type="radio" name="q4_postur" value="tidak"> Tidak</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <legend>5. Apakah Anda sedang hamil atau dalam masa pemulihan pasca melahirkan?</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q5_hamil" value="ya"> Ya</label>
+                            <label><input type="radio" name="q5_hamil" value="tidak"> Tidak</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary-action" style="margin-top: 1.5rem;">Kirim Form Kesehatan</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <div id="customModalOverlay" class="custom-modal-overlay">
+        <div class="custom-modal">
+            <button class="modal-top-close-btn" id="modalTopCloseBtn">&times;</button>
+            <h3 id="modalTitle">Pemberitahuan</h3>
+            <p id="modalMessage">Isi pesan akan muncul di sini.</p>
+            <button class="modal-close-btn" id="modalMainCloseBtn">Mengerti</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <script src="form_kesehatan.js"></script> </body>
+</html>

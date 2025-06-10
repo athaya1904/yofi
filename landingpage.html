@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YoFi - Latihan Yoga</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/static/landingpage.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="nav-left">
+        <span class="logo">
+          <a href="/index.html"><img src="logoyofi.png" alt="Logo YoFi">
+          </a>
+        </span>
+        <span class="divider">|</span>
+        <ul class="nav-links">
+          <li><a href="/static/main_dashboard.html" id="navBeranda">Beranda</a></li>
+          <li><a href="#fitur">Fitur</a></li>
+          <li><a href="#panduan">Panduan</a></li>
+          <li><a href="#tentang-kami">Tentang Kami</a></li>
+        </ul>
+        <!-- ID navigasi ditambahkan -->
+      </div>
+      <div class="nav-right" id="navAuthLinks">
+        <a href="#" class="link-masuk" id="btnTampilLogin">Masuk</a>
+        <a href="#" class="btn-daftar" id="btnTampilDaftar">Daftar</a>
+      </div>
+      <div class="nav-right" id="navUserLinks" style="display: none;">
+        <span id="userGreeting">Halo, User!</span>
+        <a href="#" class="btn-logout" id="btnLogout">Keluar</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1 class="lorem-title">Atasi Nyeri Punggung,<br />Kembalikan Kenyamanan Anda<br />Bersama YoFi</h1>
+        <p>Latihan yoga yang dipersonalisasi dan aman untuk mengatasi penyebab nyeri punggung Anda, kapan pun dan di mana pun.</p>
+        <a href="#" class="cta-button" id="ctaCobaSekarang">Coba Sekarang</a>
+    </div>
+  </section>
+
+  <section class="subtext">
+    <p>Dengan YoFi, Anda dapat berlatih yoga lebih aman, lebih tepat, dan lebih efektif, tanpa harus datang ke studio</p>
+  </section>
+
+  <section class="mengapa" id="panduan">
+    <h2>Mengapa Memilih YoFi untuk Latihan Yoga Anda?</h2>
+    <div class="cards">
+      <div class="card">Panduan Cepat Tanpa Ribet<br /><small>Video dan teks interaktif</small></div>
+      <div class="card">Fleksibel, Bisa Latihan Kapan Saja<br /><small>Cocok untuk jadwal sibuk</small></div>
+      <div class="card">Dibuat oleh Praktisi Yoga Berpengalaman<br /><small>Profesional terpercaya</small></div>
+      <div class="card">Rekomendasi Pose yang Tepat untuk Anda<br /><small>Personalisasi latihan</small></div>
+    </div>
+  </section>
+
+  <section class="fitur" id="fitur">
+    <h2>Fitur Unggulan YoFi</h2>
+    <div class="cards">
+      <div class="card">Saran Pose Otomatis Berdasarkan Form Anda</div>
+      <div class="card">Modul Interaktif untuk Semua Level</div>
+      <div class="card">Video Yoga, Audio, hingga Konten Edukasi</div>
+      <div class="card">Tracking Latihan Harian dan Kemajuan Anda</div>
+    </div>
+  </section>
+
+  <section class="tentang-kami" id="tentang-kami">
+    <h2>Tentang Kami</h2>
+    <div class="team">
+      <div class="person"><img src="profil1.jpg" alt="Profil 1" /><h4>Ghefira Putri Athaya Fairuz</h4><h5>1105220098</h5><p>Instruktur Yoga</p></div>
+      <div class="person"><img src="profil2.jpg" alt="Profil 2" /><h4>Citra Charisma Yudi Pratiwi</h4><h5>1105220098</h5><p>UX Designer</p></div>
+      <div class="person"><img src="profil3.jpg" alt="Profil 3" /><h4>Gita Putri Wibowo</h4><h5>1105220098</h5><p>Backend Engineer</p></div>
+      <div class="person"><img src="profil4.jpg" alt="Profil 4" /><h4>Liana Nafisa Saftari, B. Eng., Ph. D.</h4><p>Marketing</p></div>
+      <div class="person"><img src="profil5.jpg" alt="Profil 5" /><h4>Milla</h4><p>AI Specialist</p></div>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="auth-modal-overlay">
+    <div class="auth-modal-content">
+      <span class="auth-close-btn" id="closeLoginModal">&times;</span>
+      <h3>Masuk ke Akun YoFi</h3>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email:</label>
+          <input type="email" id="loginEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password:</label>
+          <input type="password" id="loginPassword" required>
+        </div>
+        <button type="submit" class="btn-auth">Masuk</button>
+        <p class="auth-switch">Belum punya akun? <a href="#" id="switchToDaftar">Daftar di sini</a></p>
+        <p id="loginError" class="auth-error-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Daftar Modal -->
+  <div id="daftarModal" class="auth-modal-overlay">
+    <div class="auth-modal-content">
+      <span class="auth-close-btn" id="closeDaftarModal">&times;</span>
+      <h3>Buat Akun YoFi Baru</h3>
+      <form id="daftarForm">
+        <div class="form-group">
+          <label for="daftarNama">Nama Lengkap:</label>
+          <input type="text" id="daftarNama" required>
+        </div>
+        <div class="form-group">
+          <label for="daftarEmail">Email:</label>
+          <input type="email" id="daftarEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="daftarPassword">Password:</label>
+          <input type="password" id="daftarPassword" required minlength="6">
+        </div>
+        <button type="submit" class="btn-auth">Daftar</button>
+        <p class="auth-switch">Sudah punya akun? <a href="#" id="switchToLogin">Masuk di sini</a></p>
+        <p id="daftarError" class="auth-error-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase SDK dan JS utama -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script src="/static/landingpage.js"></script>
+</body>
+</html>
